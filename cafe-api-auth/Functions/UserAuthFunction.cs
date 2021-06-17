@@ -52,7 +52,7 @@ namespace cafe_api_auth
 
                 await _userService.UpsertUser(loginRequest, loginResponse);
 
-                var res = _tokenHelper.SetRefreshTokenCookie(loginResponse.RefreshToken, req);
+                var res = new HttpResponseMessage(HttpStatusCode.OK);
 
                 res.Content = new StringContent(JsonConvert.SerializeObject(new
                 {
