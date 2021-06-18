@@ -59,7 +59,7 @@ namespace cafe_api_auth
                     user = loginResponse.User.Adapt<CustomerDto>(),
                     access_token = loginResponse.Token,
                     refresh_token = loginResponse.RefreshToken,
-                    cidi = "success",
+                    cidiwithgithub = "success"
                 }), Encoding.UTF8, "application/json");
 
                 return res;
